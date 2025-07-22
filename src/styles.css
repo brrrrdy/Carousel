@@ -1,0 +1,11 @@
+/* Base Styles */
+:root {
+  --primary: #f2ccc3;
+  --secondary: #e78f8e;
+    --tertiary: #d4a5a5;
+  --accent: #ffe6e8;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --gray: #6c757d;
+  --white: #ffffff;
+}
