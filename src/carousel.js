@@ -1,3 +1,64 @@
+export const createCarousel = (images) => {
+  if (!images || !images.length) {
+    throw new Error("Carousel requires an array of images");
+  }
+
+  let currentIndex = 0;
+  let intervalId;
+  let carouselElement = null;
+  let callbacks = {};
+
+  const goToSlide = (index) => {
+    currentIndex = index;
+    trigger("slideChange", currentIndex);
+  };
+
+  const nextSlide = () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    goToSlide(currentIndex);
+  };
+
+  const prevSlide = () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    goToSlide(currentIndex);
+  };
+
+  const startCarousel = (interval = 5000) => {
+    stopCarousel();
+    intervalId = setInterval(nextSlide, interval);
+  };
+
+  const stopCarousel = () => {
+    clearInterval(intervalId);
+  };
+
+  const on = (event, callback) => {
+    callbacks[event] = callbacks[event] || [];
+    callbacks[event].push(callback);
+  };
+
+  const trigger = (event, ...args) => {
+    if (callbacks[event]) {
+      callbacks[event].forEach((cb) => cb(...args));
+    }
+  };
+
+  return {
+    get currentIndex() {
+      return currentIndex;
+    },
+    get images() {
+      return [...images];
+    },
+    goToSlide,
+    nextSlide,
+    prevSlide,
+    startCarousel,
+    stopCarousel,
+    on,
+  };
+};
+
 /*
 
 export carousel
