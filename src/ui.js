@@ -1,4 +1,5 @@
 import { createCarousel } from "./carousel.js";
+import { createForm } from "./form.js";
 
 // Import images
 import exPic01 from "./assets/images/ex-pic01.webp";
@@ -84,4 +85,18 @@ export function initializeCarousel(selector) {
   carousel.startCarousel();
 
   return carousel;
+}
+
+const fields = [
+  { label: "Name", name: "name", type: "text", required: true },
+  { label: "Email", name: "email", type: "email", required: true },
+  { label: "Message", name: "message", type: "textarea", required: true },
+];
+
+export function renderForm() {
+  const formContainer = document.querySelector(".form-container");
+  if (formContainer) {
+    const form = createForm(fields);
+    formContainer.appendChild(form);
+  }
 }

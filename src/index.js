@@ -1,7 +1,8 @@
-import { initializeCarousel } from "./ui.js";
+import { initializeCarousel, renderForm } from "./ui.js";
+import { createForm } from "./form.js";
 import "./styles.css";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Init Carousel
   initializeCarousel(".carousel-container");
+  renderForm();
 });

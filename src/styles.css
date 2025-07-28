@@ -149,3 +149,62 @@ body {
 .carousel-indicator:hover {
   background: rgba(255, 255, 255, 0.8);
 }
+
+/* Form styles */
+.form-container {
+  margin: 32px auto 0 auto;
+  max-width: 400px;
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 24px 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.custom-form label {
+  font-weight: 500;
+  color: #333;
+}
+
+.custom-form input,
+.custom-form textarea {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: vertical;
+  background: #fff;
+}
+
+.custom-form input:focus,
+.custom-form textarea:focus {
+  border-color: #ffd966;
+  outline: none;
+}
+
+.custom-form button[type="submit"] {
+  background: #ffd966;
+  color: #222;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.custom-form button[type="submit"]:hover {
+  background: #ffe599;
+}
