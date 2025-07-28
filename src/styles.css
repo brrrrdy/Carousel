@@ -13,6 +13,7 @@
   --gray: #6c757d;
   --white: #ffffff;
   --valid: #d3e9ca;
+  --form-border-highlight: #e47a24;
 }
 
 /* fonts */
@@ -187,13 +188,13 @@ body {
 
 .custom-form input:focus,
 .custom-form textarea:focus {
-  border-color: #ffd966;
+  border-color: var(--form-border-highlight);
   outline: none;
 }
 
 .custom-form input:valid,
 .custom-form textarea:valid {
-  background-color: var(--valid);
+  border-color: var(--valid);
 }
 
 .custom-form button[type="submit"] {
