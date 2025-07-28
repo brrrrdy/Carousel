@@ -1,4 +1,8 @@
-/* Base Styles */
+/* * {
+  outline: 1px solid red !important;
+} */
+
+/* base styles */
 :root {
   --primary: #f2ccc3;
   --secondary: #e78f8e;
@@ -18,16 +22,15 @@ body {
   padding: 0;
 }
 
-/* Home Container */
+/* home container */
 .home-container {
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   height: 100vh;
-  padding: 20px;
   box-sizing: border-box;
 }
 
-/* Home Header */
+/* home header */
 
 .home-header {
   text-align: center;
@@ -39,30 +42,18 @@ body {
   color: var(--primary);
 }
 
-/* Home Content */
+/* carousel container */
 
-.home-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-/* Carousel */
-
-/* Carousel Container */
 .carousel-container {
   position: relative;
   width: 80%;
-  height: 50%;
-  margin: 20px auto;
+  height: auto;
+  margin: 0 auto;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Navigation Buttons */
+/* carousel nav buttons */
 .carousel-button {
   position: absolute;
   top: 50%;
@@ -95,7 +86,8 @@ body {
   right: 20px;
 }
 
-/* Carousel Slides */
+/* carousel slides */
+
 .carousel-inner {
   height: 100%;
   position: relative;
@@ -150,9 +142,10 @@ body {
   background: rgba(255, 255, 255, 0.8);
 }
 
-/* Form styles */
+/* form styles */
+
 .form-container {
-  margin: 32px auto 0 auto;
+  margin: auto;
   max-width: 400px;
   background: #fafafa;
   border-radius: 8px;
