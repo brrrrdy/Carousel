@@ -4,7 +4,7 @@
 
 /* base styles */
 :root {
-  --primary: #f2ccc3;
+  --primary: #8a0a96;
   --secondary: #e78f8e;
   --tertiary: #d4a5a5;
   --accent: #ffe6e8;
@@ -13,6 +13,10 @@
   --gray: #6c757d;
   --white: #ffffff;
 }
+
+/* fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
 
 body {
   font-family: "Arial", sans-serif;
@@ -34,11 +38,11 @@ body {
 
 .home-header {
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .home-header h1 {
-  font-size: 2.5rem;
+  font-family: "Pirata One", cursive;
+  font-size: 3rem;
   color: var(--primary);
 }
 
